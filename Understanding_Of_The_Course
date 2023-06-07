@@ -1,0 +1,35 @@
+ChatGPT:
+
+Building Systems:
+The course started with discussing the different types of LLMs and how to apply each using different prompts. We use the OpenAI library and its secret key
+( which we have to configure as an environmental variable) to employ the gpt 3.5 turbo model. One limitation of the model is that it takes data in terms of 
+tokens rather than character-wise, so sometimes, even simple tasks of reversing a word cannot be executed properly. Moderation is one approach that can be used 
+to determine whether the given text upholds moral principles, like looking for unfavourable signs. We have seen how prompt injunctions can be avoided by using a 
+delimiter or by asking the user to specify whether or not it is a prompt injunction. Splitting complex tasks into simpler subtasks can be executed by chaining 
+multiple tasks together. It is easier to test and also reduces cost. We ended the course by going through the different ways of evaluating the outputs and models. We can do this by using moderation and through a step-by-step process. 
+
+LangChain:
+The course covered the use of LangChain and how it interacts with LLMs.We learnt that a LangChain library function parses the LLM's output, assuming it will use
+specific keywords. We use prompt templates because prompts can be long, and it is better to reuse them when possible. We saw how LangChain facilitates handling 
+prompts, models, and parsers. Chains are when we combine a prompt with an LLM and output parsing. There are different types of chains like simple sequential 
+chain, sequential chain and router chain. We learnt the different memory types and the applications of each. We can also maintain memory errors and feedback and 
+use these to prevent repeating mistakes. We learnt that embedding vectors capture content and convert them to numerical values(vectors). We saw that agents
+decide which action to take and in which order we should use the tool to observe its output.
+
+Prompt Engineering:
+The course covered the fundamentals of OpenAi. We learnt the two essential principles of prompting: writing clear and specific instructions and giving the model 
+time to think. We learnt that the model has the limitation of hallucinations, and it can be reduced by finding relevant information and then answering the 
+questions based on that information. We can use iterative statements to give multiple inputs at the same time. We follow prompt guidelines of being transparent 
+and specific, then analyze why the desired result does not come as output. We then refine the idea and the prompt and repeat the process. 
+The model can also be used to summarize text provided by the users. An LLM model is also great at inferring the sentiment of the user. We can also use the 
+LLM model for language translation, spell check, changes of tone to messages, and even changing the code from one language to another. The model is also great 
+at expanding a shorter amount of data into an adequately worded essay. Ultimately, we successfully Built an AI ChatBot for a restaurant.
+
+Diffusion Models: 
+The course taught us the core mechanism of diffusion models, i.e. "diffusing" information across multiple steps. Here each step means going through 
+transformations to get to a refined output eventually. The process begins with an initial distribution. In this course, we aimed to get more sprites from the 
+set we already had. We did so using a neural network—the steps included sampling from the current distribution. Then we conditioned based on the observation. 
+Lastly, we applied a set of transformation functions. The neural network that we use here is UNet. The advantage of this is that the input and output or of the 
+exact dimensions(size). The transformation functions act as "diffusion operators" that updates the distribution by spreading and refining the information 
+across the context. We gain control by using embeddings and adding context. Lastly, we learnt that to speed up the process; we use DDIM instead of DDPM. 
+Here DDPM is probabilistic, whereas DDIM is deterministic. Moreover, DDIM is faster because it can skip timesteps.
